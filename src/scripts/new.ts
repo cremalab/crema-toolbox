@@ -1,7 +1,7 @@
 import spawn from "cross-spawn"
-import { PATHS } from "../config/paths"
-import { args } from "../utils/arg"
+import { paths } from "../config/paths"
+import { args } from "../utils/args"
 
-spawn.sync("ln", ["-sf", PATHS.templates, PATHS.appTemplates])
+spawn.sync("ln", ["-sf", paths.templates, paths.appTemplates])
 spawn.sync("hygen", [args()[0], "new"], { stdio: "inherit" })
-spawn.sync("rm", [PATHS.appTemplates])
+spawn.sync("rm", [paths.appTemplates])

@@ -11,6 +11,7 @@ switch (script) {
   case "web:build":
   case "web:dev":
   case "web:start":
+  case "playground":
   case "new": {
     const result = spawn.sync(
       "node",

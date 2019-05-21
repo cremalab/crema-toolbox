@@ -11,7 +11,7 @@ const appTemplates = path.join(appRoot, "_templates")
 const root = path.join(__dirname, "../..")
 const templates = path.join(root, "/_templates")
 
-export const PATHS = {
+export const paths = {
   appRoot,
   appTemplates,
   hygen,
