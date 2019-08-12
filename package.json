@@ -1,19 +1,21 @@
 {
-  "name": "crema-scripts",
+  "name": "crema-toolbox",
   "version": "0.1.0",
   "license": "MIT",
   "bin": {
-    "crema-scripts": "./build/index.js"
+    "crema-toolbox-web": "./dist/projectData/web/index.js"
   },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
-    "build",
-    "links",
-    "_templates"
+    "/_templates",
+    "/dist"
   ],
-  "types": "./types/modules/crema-scripts.d.ts",
   "author": "Crema",
   "scripts": {
-    "start": "tsc -w -p tsconfig.json"
+    "start": "rimraf dist && tsc -w -p tsconfig.json",
+    "test:unit": "cd src/internal/tests && jest -i",
+    "test:unit:watch": "npm run test:unit -- --watch"
   },
   "dependencies": {
     "@storybook/addon-actions": "^5.0.11",
@@ -23,12 +25,12 @@
     "@types/jest": "^24.0.13",
     "@types/react": "^16.8.17",
     "@types/react-dom": "^16.8.4",
+    "@types/react-redux": "^7.0.9",
     "@types/react-test-renderer": "^16.8.1",
     "@types/storybook__addon-actions": "^3.4.1",
     "@types/storybook__react": "^4.0.1",
     "@typescript-eslint/eslint-plugin": "^1.6.0",
     "@typescript-eslint/parser": "^1.6.0",
-    "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
@@ -37,15 +39,33 @@
     "prettier": "^1.16.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "^2.1.3",
+    "react-redux": "^7.0.3",
+    "react-scripts": "^2.1.8",
     "react-test-renderer": "^16.8.6",
-    "typescript": "^3.4.5"
+    "react-testing-library": "^7.0.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "typescript": "^3.4.5",
+    "webpack": "4.28.3"
   },
   "peerDependencies": {},
   "devDependencies": {
+    "@types/child-process-promise": "^2.2.1",
     "@types/cross-spawn": "^6.0.0",
     "@types/node": "^12.0.2",
+    "@types/rimraf": "^2.0.2",
     "@types/webpack": "^4.4.32",
-    "cross-spawn": "^6.0.5"
+    "child-process-promise": "^2.2.1",
+    "cross-spawn-promise": "^0.10.1",
+    "jest": "^24.7.1",
+    "rimraf": "^2.6.3",
+    "start-server-and-test": "^1.9.1",
+    "tree-cli": "^0.4.12",
+    "ts-jest": "^24.0.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "babel-jest"
+    }
   }
 }

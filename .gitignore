@@ -1,4 +1,5 @@
 node_modules/
 *.tgz
 package
-build
+dist
+src/internal/tests/temp

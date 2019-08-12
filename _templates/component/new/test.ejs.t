@@ -1,9 +1,9 @@
 ---
 to: src/components/<%= name %>/test.tsx
 ---
+import React from "react"
 <% const nameBase = connected ? name + "Base" : name -%>
 import { <%= connected ? `${nameBase} as ${name}` : name %> } from "."
-import React from "react"
 import { shallowRender } from "../../utils/shallowRender"
 
 describe("<%= name %>", () => {

@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`structure web adds files as expected 1`] = `
+"
+/Users/Rob_LaFeve/Dev/crema-toolbox/src/internal/tests/temp
+├── .eslintrc.js
+├── .github
+|  └── PULL_REQUEST_TEMPLATE.md
+├── .prettierrc.js
+├── public
+|  ├── favicon.ico
+|  ├── index.html
+|  └── manifest.json
+├── src
+|  ├── assets
+|  |  └── crema-logo.svg
+|  ├── components
+|  |  ├── App
+|  |  |  ├── README.md
+|  |  |  ├── __snapshots__
+|  |  |  |  └── test.tsx.snap
+|  |  |  ├── index.css
+|  |  |  ├── index.tsx
+|  |  |  ├── stories.tsx
+|  |  |  └── test.tsx
+|  |  └── Initializer
+|  |     ├── README.md
+|  |     ├── __snapshots__
+|  |     |  └── test.tsx.snap
+|  |     ├── index.tsx
+|  |     └── test.tsx
+|  ├── crema-toolbox-env.d.ts
+|  ├── index.css
+|  ├── index.tsx
+|  ├── serviceWorker.ts
+|  ├── state
+|  |  ├── actions
+|  |  |  ├── actionTodoAdd.ts
+|  |  |  ├── actionTodoRemove.ts
+|  |  |  └── actionTodoUpdate.ts
+|  |  ├── index.ts
+|  |  └── reducers
+|  |     ├── index.ts
+|  |     └── reducerTodos
+|  |        ├── __snapshots__
+|  |        |  └── test.ts.stnap
+|  |        ├── index.ts
+|  |        └── test.ts
+|  └── types
+|     ├── ActionType.ts
+|     ├── EntityTodo.ts
+|     ├── State.ts
+|     └── Todo.ts
+└── tsconfig.json
+
+directory: 15 file: 34 
+
+[2K[1G"
+`;
+
+exports[`structure web content of .prettierrc.js is correct 1`] = `
+"module.exports = {
+  semi: false,
+  singleQuote: false,
+  tabWidth: 2,
+  trailingComma: \\"all\\",
+}
+"
+`;
+
+exports[`structure web content of crema-toolbox-env.d.ts is correct 1`] = `
+"/// <reference types=\\"crema-toolbox\\" />
+"
+`;
